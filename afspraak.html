@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afspraak maken — Nagelstudio Bellessa</title>
+  <meta name="description" content="Plan online je afspraak bij Nagelstudio Bellessa in Izegem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.jpg" alt="Nagelstudio Bellessa logo" class="brand-logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html#diensten">Diensten</a></li>
+        <li><a href="index.html#galerij">Galerij</a></li>
+        <li><a href="index.html#prijzen">Prijzen</a></li>
+        <li><a href="index.html#uren">Openingsuren</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="afspraak.html" class="btn btn-nav">Afspraak maken</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner container">
+      <p class="eyebrow">Online reserveren</p>
+      <h1>Maak een afspraak</h1>
+      <p class="hero-sub">Kies je moment en behandeling via het online boekingsplatform. Zo staat jouw plekje meteen vast.</p>
+
+      <!-- ===================================================
+           BOEKINGSPLATFORM
+           Vervang de '#' in de knop hieronder door de echte
+           link van je boekingsplatform (bv. Salonized,
+           Treatwell, Planity, Bookedin ...).
+           =================================================== -->
+      <div class="booking-box">
+        <p class="booking-status">Online boeken komt binnenkort beschikbaar.</p>
+        <a href="#" class="btn btn-primary btn-lg booking-btn" aria-disabled="true">Boek online →</a>
+        <p class="booking-alt">Liever meteen contact? Stuur een bericht via
+          <a href="https://www.facebook.com/p/Nagelstudio-Bellessa-100063533382180/" target="_blank" rel="noopener">Facebook</a>.
+        </p>
+      </div>
+
+      <div class="hero-actions">
+        <a href="index.html" class="btn btn-ghost">← Terug naar de website</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.jpg" alt="Nagelstudio Bellessa" class="footer-logo" />
+      <p>Baronstraat 183 bus 201, 8870 Izegem · België</p>
+      <p class="footer-social">
+        <a href="https://www.facebook.com/p/Nagelstudio-Bellessa-100063533382180/" target="_blank" rel="noopener">Facebook</a>
+      </p>
+      <p class="footer-copy">© <span id="year"></span> Nagelstudio Bellessa. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
